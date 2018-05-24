@@ -1,0 +1,112 @@
+<html>
+<head>
+    <title>MEC Login</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+<style>
+/* The container */
+.container {
+    display: block;
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 0px;
+    cursor: pointer;
+    font-size: 16px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 18px;
+    width: 18px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.container input:checked ~ .checkmark {
+    background-color: #2196F3;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container .checkmark:after {
+    top: 6.5px;
+    left: 6.5px;
+    width: 5.75px;
+    height: 5.75px;
+    border-radius: 50%;
+    background: white;
+}
+</style>
+<body>
+    <div class="loginbox">
+        <img src="avatar.png" class="avatar">
+        <h1>MEC Login</h1>
+        <form method="post" action="forms.php">
+            <p>Branch:</p>
+            <select name="branch" size="1">
+                <option value="C">CS</option>
+                <option value="B">EB</option>
+                <option value="E">EC</option>
+                <option value="EE">EE</option>
+            </select>
+            <p>Semester:</p>
+            <select name="sem">
+                <option value="2">2</option>
+                <option value="4">4</option>
+                <option value="6">6</option>
+                <option value="8">8</option>
+            </select>
+            <p>Division:</p>
+            <label class="container">A
+                <input type="radio" name="div" value="A">
+                <span class="checkmark"></span>
+            </label>
+            <label class="container">B
+                <input type="radio" name="div" value="B">
+                <span class="checkmark"></span>
+            </label>
+            <p>Roll No.</p>
+            <input type="text" name="roll" placeholder="Enter Roll number">
+            <input type="submit" value="Go">                   
+            <div id="fb-root"></div>                     
+                <a href="mail1.html">Report a problem?</a>
+        </form>
+    </div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</html>
